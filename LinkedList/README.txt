@@ -1,7 +1,8 @@
-1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+1.Á´±íÄæÐò
 LeetCode 206. Reverse Linked List
 
-ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½Í·ï¿½Úµï¿½Ö¸ï¿½ï¿½headï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò£¨²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼ä£©
-Ë¼Â·ï¿½ï¿½
-	ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã£¬Ã¿ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµã¼´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµï¿½
-	ï¿½ï¿½ï¿½ï¿½ÎªreserveLinkedList_one.java
+ÒÑÖªÁ´±íÍ·½ÚµãÖ¸Õëhead£¬½«Á´±íÄæÐò£¨²»¿ÉÉêÇë¶îÍâ¿Õ¼ä£©
+
+Ë¼Â·£º
+	ÒÀ´Î±éÀúÁ´±í½Úµã£¬Ã¿±éÀúÒ»¸ö½Úµã¼´ÄæÖÃÒ»¸ö½Úµã
+	´úÂëÎªreserveLinkedList_one.java
