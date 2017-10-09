@@ -52,7 +52,7 @@ class SolutionTwo{
 		}
 		
 		modify_list_tail.next = head; //连接逆置后的链表尾与逆置段的后一个节点
-		// 如果pre_head不空，说明不是从第一个节点开始逆置的m>1
+		//如果pre_head不空，说明不是从第一个节点开始逆置的m>1
 		if(pre_head != null){
 			pre_head.next = new_head; //将逆置链表开始的节点前驱与逆置后的头节点连接
 		}else{
