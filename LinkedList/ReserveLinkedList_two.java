@@ -32,14 +32,14 @@ class SolutionTwo{
 	
 	
 	public ListNode resverseBetween(ListNode head,int m,int n){
-		int change_len = n-m+1;//¼ÇÂ¼ĞèÒªÄæÖÃµÄ½Úµã³¤¶È
-		ListNode pre_head = null;//³õÊ¼»¯¿ªÊ¼ÄæÖÃµÄ½ÚµãµÄÇ°Çı
-		ListNode result = head;//×îÖÕ×ª»»ºóµÄÁ´±íÍ·½Úµã£¬·ÇÌØÊâÇé¿ö¼´Îªhead
+		int change_len = n-m+1;//è®°å½•éœ€è¦é€†ç½®çš„èŠ‚ç‚¹é•¿åº¦
+		ListNode pre_head = null;//åˆå§‹åŒ–å¼€å§‹é€†ç½®çš„èŠ‚ç‚¹çš„å‰é©±
+		ListNode result = head;//æœ€ç»ˆè½¬æ¢åçš„é“¾è¡¨å¤´èŠ‚ç‚¹ï¼Œéç‰¹æ®Šæƒ…å†µå³ä¸ºhead
 		while(head != null && --m > 0){
-			pre_head = head; //¼ÇÂ¼headµÄÇ°Çı
+			pre_head = head; //è®°å½•headçš„å‰é©±
 			head = head.next;
 		} 
-		//½«modify_list_tailÖ¸Ïòµ±Ç°µÄhead£¬¼´×ªÖÃºóµÄÁ´±íÎ²
+		//å°†modify_list_tailæŒ‡å‘å½“å‰çš„headï¼Œå³è½¬ç½®åçš„é“¾è¡¨å°¾
 		ListNode modify_list_tail = head;
 		ListNode new_head = null;
 		
@@ -48,15 +48,15 @@ class SolutionTwo{
 			head.next = new_head;
 			new_head = head;
 			head = next;
-			change_len--; //Ã¿Íê³ÉÒ»¸ö½ÚµãÄæÖÃ£¬change_len--;
+			change_len--; //æ¯å®Œæˆä¸€ä¸ªèŠ‚ç‚¹é€†ç½®ï¼Œchange_len--;
 		}
 		
-		modify_list_tail.next = head; //Á¬½ÓÄæÖÃºóµÄÁ´±íÎ²ÓëÄæÖÃ¶ÎµÄºóÒ»¸ö½Úµã
-		//Èç¹ûpre_head²»¿Õ£¬ËµÃ÷²»ÊÇ´ÓµÚÒ»¸ö½Úµã¿ªÊ¼ÄæÖÃµÄm>1
+		modify_list_tail.next = head; //è¿æ¥é€†ç½®åçš„é“¾è¡¨å°¾ä¸é€†ç½®æ®µçš„åä¸€ä¸ªèŠ‚ç‚¹
+		// å¦‚æœpre_headä¸ç©ºï¼Œè¯´æ˜ä¸æ˜¯ä»ç¬¬ä¸€ä¸ªèŠ‚ç‚¹å¼€å§‹é€†ç½®çš„m>1
 		if(pre_head != null){
-			pre_head.next = new_head; //½«ÄæÖÃÁ´±í¿ªÊ¼µÄ½ÚµãÇ°ÇıÓëÄæÖÃºóµÄÍ·½ÚµãÁ¬½Ó
+			pre_head.next = new_head; //å°†é€†ç½®é“¾è¡¨å¼€å§‹çš„èŠ‚ç‚¹å‰é©±ä¸é€†ç½®åçš„å¤´èŠ‚ç‚¹è¿æ¥
 		}else{
-			result = new_head; //Èç¹ûpre_headÎª¿Õ£¬ËµÃ÷m=1´ÓµÚÒ»¸ö½Úµã¿ªÊ¼ÄæÖÃ¡£½á¹û¼´ÄæÖÃºóµÄÍ·½Úµã.
+			result = new_head; //å¦‚æœpre_headä¸ºç©ºï¼Œè¯´æ˜m=1ä»ç¬¬ä¸€ä¸ªèŠ‚ç‚¹å¼€å§‹é€†ç½®ã€‚ç»“æœå³é€†ç½®åçš„å¤´èŠ‚ç‚¹.
 		}
 		
 		return result;
