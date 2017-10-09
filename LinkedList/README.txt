@@ -23,7 +23,7 @@ https://leetcode.com/problems/reverse-linked-list-ii/description/
 代码为ReserveLinkedList_two.java
 ----------------------------------------------------------------------
 3.求两个链表的交点
-LeetCode 160
+LeetCode 160 Intersection of Two Linked Lists
 已知链表A的头节点指针headA，链表B的头节点指针headB，两个链表相交，
 求两个链表交点对应的节点
 
@@ -44,3 +44,5 @@ https://leetcode.com/problems/intersection-of-two-linked-lists/description/
  计算headA的长度和headB的长度，较长的链表多出的长度
  将较长的链表指针移动到和较短的链表指针对齐的位置
  headA和headB同时移动，当两指针指向同一节点时即找到了。
+ 
+ 代码为：CrossoverList.java
