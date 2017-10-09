@@ -46,3 +46,37 @@ https://leetcode.com/problems/intersection-of-two-linked-lists/description/
  headA和headB同时移动，当两指针指向同一节点时即找到了。
  
  代码为：CrossoverList.java
+----------------------------------------------------------------------------
+4.链表求环
+LeetCode 141 Linked List Cycle
+LeetCode 142 Linked List Cycle2
+https://leetcode.com/problems/linked-list-cycle-ii/description/
+
+已知链表中可能存在环，若有环返回环起始节点，否则返回null
+
+方法1：
+  1.遍历链表，将链表中节点对应的指针，插入set
+  2.在遍历时插入节点前，需要在set中查找，第一个在set中发现的节点地址，即链表环的起点
+方法2：
+  定义两个指针slow和fast
+  slow每次移动1个节点，fast每次移动2个节点
+  如果存在环，则向前走的某一刻fast和slow一定会相遇，但相遇的点不一定是环的起点。
+
+  设：1->2->3->4->5->6->7->3....
+      3为环的起始点
+   当fast和slow相遇时，
+   slow:2,3,4,5,6
+   fast:2,3,4,5,6,7,3,4,5,6
+   
+   定义2->3段为a，4->5->6段为b,7->3段为c
+   slow=a+b
+   fast=a+b+c+b
+   因为fast速度为slow两倍
+   2*(a+b)=a+b+c+b ----> a=c
+   
+   结论：从head和meet出发，两指针速度相同，相遇时即为环的起点。
+
+代码为：CycleLinkedList.java
+
+
+  
