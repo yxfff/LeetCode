@@ -38,7 +38,7 @@ public class ReserveLinkedList_one {
 		e.next=f;
 		f.next=null;
 		
-		SolutionOne s = new SolutionOne();
+		Solution s = new Solution();
 		ListNode head = s.reserveList(a);
 		
 		while(head.next != null){
