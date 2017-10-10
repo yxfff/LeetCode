@@ -101,5 +101,5 @@ https://leetcode.com/problems/partition-list/description/
   
   返回less_head.next
  
-  
+代码为：PartitionList.java
 
