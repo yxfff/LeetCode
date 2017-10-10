@@ -78,5 +78,28 @@ https://leetcode.com/problems/linked-list-cycle-ii/description/
 
 代码为：CycleLinkedList.java
 
+-------------------------------------------------------------------------------
+5. 链表划分
+LeetCode86 Partition List
+https://leetcode.com/problems/partition-list/description/
 
+已知链表头指针head与数值x，将所有小于x的节点放在大于或等于x的节点前，且保持这些节点的原来的相对位置。
+
+思路：
+  用临时头节点
+  设置两个临时节点，less_head和more_head
+  定义less_ptr指向less_head
+  定义more_ptr指向more_head
+
+  遍历链表head
+  比x小的节点放在less_ptr后面
+  比x大的节点放在less_ptr后面
+
+  连接less_ptr.next与more_head.next
   
+  more_ptr.next置空
+  
+  返回less_head.next
+ 
+  
+
