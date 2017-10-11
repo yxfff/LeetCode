@@ -103,3 +103,37 @@ https://leetcode.com/problems/partition-list/description/
  
 代码为：PartitionList.java
 
+-------------------------------------------------------------------------------
+6.复杂链表的深度拷贝
+LeetCode 138 Copy List with Random Pointer
+https://leetcode.com/problems/copy-list-with-random-pointer/description/
+
+已知一个复杂链表，节点中有一个指向本链表的任意某个节点的随机指针（也可以为空），
+求这个链表的深度拷贝（即修改原链表不会影响拷贝后链表，修改拷贝后的链表不会影响原链表）
+
+思路1：
+  使用map和list
+
+  原链表：
+  用map存储地址和节点所在位置
+  示例：
+  0x111->0  random 0x123指向2号节点
+  0x100->1  random 0x333指向3号节点
+  0x123->2  random 0x123 指向2号节点
+  0x333->3  random NULL 指向 NULL
+  0x500->4  random 0x333 指向3号节点
+
+  新链表：
+  用List存储节点所在位置和节点地址（因为节点位置即list的index，所以可以不用map）
+  0->0x200 random 2号节点地址(0x202)
+  1->0x201 random 3号节点地址(0x210)
+  2->0x202 random 2号节点地址(0x202)
+  3->0x210 random NULL
+  4->0x211 random 3号节点地址(0x210)
+思路2（推荐）：
+  使用1个map,同时存储新链表和旧链表，省略节点位置的定义
+  HashMap<RandomListNode,RandomListNode>
+
+代码为：RandomList.java
+
+  
