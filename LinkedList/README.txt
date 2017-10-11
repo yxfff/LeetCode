@@ -136,4 +136,20 @@ https://leetcode.com/problems/copy-list-with-random-pointer/description/
 
 代码为：RandomList.java
 
-  
+-----------------------------------------------------------------------------
+7. 排序链表合并（2个）
+LeetCode21 Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+已知两个已排序链表头节点指针l1和l2，将两个链表合并，合并后仍为有序的，返回合并后的头节点
+
+思路：
+  比较l1和l2指向的节点，将较小的节点插入到pre指针后，向前移动较小节点对应的指针
+  将剩余的部分拼接起来
+
+代码为：MergeSortedList.java
+
+-------------------------------------------------------------------------------
+8.排序链表合并（多个）
+LeetCode 23 Merge K Sorted Lists
+https://leetcode.com/problems/merge-k-sorted-lists/description/
