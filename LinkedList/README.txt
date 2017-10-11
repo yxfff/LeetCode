@@ -147,9 +147,23 @@ https://leetcode.com/problems/merge-two-sorted-lists/description/
   比较l1和l2指向的节点，将较小的节点插入到pre指针后，向前移动较小节点对应的指针
   将剩余的部分拼接起来
 
-代码为：MergeSortedList.java
+代码为：MergeTwoSortedList.java
 
 -------------------------------------------------------------------------------
 8.排序链表合并（多个）
 LeetCode 23 Merge K Sorted Lists
 https://leetcode.com/problems/merge-k-sorted-lists/description/
+
+已知k个已排序的链表头节点指针，将这k个链表合并，合并后仍为有序的，返回合并后的头节点
+
+方法1：暴力求解
+ 使用7中的方法两两合并，时间复杂度为O(k^2*n)
+方法2：
+ 将k*n个节点放在List中，再将List排序，再将节点顺序相连。时间复杂度为O(kN*logkN)
+ （用到ArrayList排序的知识，几种排序方法需要练习一下）
+方法3：
+  利用分治方法(递归)
+  对k个链表进行分治，两两合并
+  设有k个链表，平均每个链表有n个节点，时间复杂度为O(kNlongk)
+
+代码为：MergeMoreSortedLists.java
