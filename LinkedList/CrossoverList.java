@@ -17,12 +17,10 @@ public class CrossoverList {
 	
 		ListNode B = new ListNode(5);
 		ListNode B1 = new ListNode(2);
-		ListNode B2 = new ListNode(3);
-		ListNode B3 = new ListNode(1);
 		
 		B.next = B1;
-		B1.next = B2;
-		B2.next = B3;
+		B1.next = A2;
+		
 		
 		ListNode t = new SolutionThree().getIntersectionNode(A, B);
 		System.out.println(t.val);
