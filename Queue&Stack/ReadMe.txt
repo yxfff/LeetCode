@@ -51,3 +51,21 @@ https://leetcode.com/problems/implement-queue-using-stacks/description/
   peek方法与pop方法思路类似
 
 代码为：StackToQueue.java
+
+3.包含min函数的栈
+LeetCode 155 Min Stack
+https://leetcode.com/problems/min-stack/description/
+
+设计一个栈，支持如下操作，这些操作的算法复杂度是常数级，O(1)时间复杂度
+1）push(x)将元素x压入栈中
+2）pop弹出栈顶元素
+3）top返回栈顶元素
+4）返回栈内最小元素
+
+思路：
+  想要以O(1)的时间复杂度得到栈内最小元素
+  则需要在每一次操作时记录最小值
+  考虑到pop操作，则可以维护一个栈来存储最小值，每次getMin()时返回栈顶元素
+
+代码为MinStackBuild.java
+
