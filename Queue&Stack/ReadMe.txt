@@ -26,7 +26,7 @@ https://leetcode.com/problems/implement-stack-using-queues/description/
     如果此时到达了队尾（即data_queue.isEmpty()==true），将temp_queue中元素放回到data_queue中
     返回res；
 代码为QueueToStack.java
-
+-------------------------------------------------------------------------------------
 
 2.使用栈实现队列
 LeetCode 232 Implement Queue using Stacks
@@ -51,7 +51,7 @@ https://leetcode.com/problems/implement-queue-using-stacks/description/
   peek方法与pop方法思路类似
 
 代码为：StackToQueue.java
-
+------------------------------------------------------------------------------------
 3.包含min函数的栈
 LeetCode 155 Min Stack
 https://leetcode.com/problems/min-stack/description/
