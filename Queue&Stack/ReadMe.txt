@@ -85,3 +85,40 @@ http://poj.org/problem?id=1363
 4）若最终栈为空，说明序列合法，否则不合法
 
 代码为：RightOutOrder.java
+
+延伸：统计所有可能得出栈序列，卡特兰数（待做）
+
+-----------------------------------------------------------------------------
+5.计算器
+LeetCode 224 Basic Calculator
+https://leetcode.com/problems/basic-calculator/description/
+
+设计一个计算器，输入一个字符串存储的表达式，可以计算包括（，），+，-
+四种符号的数学表达式，输入的数学表达式字符串保证是否合法的。输入的数学的表达式中
+可能存在空格字符。
+
+思路：
+  1.定义两个链表number_stack,operator_stack用来存放数字和符号
+  2.定义布尔变量compute_flag记录是否可以计算
+  3.遍历字符串，
+    NUMBER_STATE
+    1）如果为数字 number=number*10+ch-'0';
+    2) 否则，数字进数字栈number_stack.push
+       根据compute_flag进行计算，并切换至OPERATION_STATE
+       并将字符指针退格，number=0
+    OPERATION_STATE
+    1)如果为+,-
+    operation_state.push
+    compute_flag=1
+    2)如果为（
+    compute_flag=0
+    切换至NUMBER_STACK
+    3)如果为）
+     进行计算
+    4）如果为数字
+     切换到NUMBER_STATE，并将字符指针i退格
+
+ 
+   注意退格指针i的时机
+代码为StackToCalculator.java
+
