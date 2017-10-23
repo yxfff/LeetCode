@@ -9,7 +9,7 @@ public class QueueToStack {
 	}
 }
 
-//思路1
+//脣录脗路1
 class MyStack{
 	private Queue<Integer> data_queue = new LinkedList<Integer>();
 	/** Initialize your data structure here. */
@@ -48,7 +48,7 @@ class MyStack{
 }
 
 
-//思路2：比较麻烦
+//脣录脗路2拢潞卤脠陆脧脗茅路鲁
 class MyStack2{
 	private Queue<Integer> data_queue = new LinkedList<Integer>();
 	/** Initialize your data structure here. */
@@ -102,3 +102,4 @@ class MyStack2{
 		return data_queue.isEmpty();
 	}
 }
+
