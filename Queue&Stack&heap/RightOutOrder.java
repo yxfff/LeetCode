@@ -14,12 +14,12 @@ class Solution{
 		Stack<Integer> stack = new Stack<Integer>();
 		int size = order.size();
 		
-		//Õ»ºÍorder³¤¶ÈÏàÍ¬£¬´æ´¢ÓĞĞòÊı×Ö1-n
+		//æ ˆå’Œorderé•¿åº¦ç›¸åŒï¼Œå­˜å‚¨æœ‰åºæ•°å­—1-n
 		for(int i=1;i<=size;i++){
 			stack.push(i);
 		}
 		
-		//ÒÀ´ÎÈ¡Ò»¸öÔªËØ±È½Ï£¬ÏàÍ¬ÔòÒÆ³ö¶ÓÁĞºÍÕ»
+		//ä¾æ¬¡å–ä¸€ä¸ªå…ƒç´ æ¯”è¾ƒï¼Œç›¸åŒåˆ™ç§»å‡ºé˜Ÿåˆ—å’Œæ ˆ
 		while(stack.peek() == order.peek() && order.size()!=0){
 			stack.pop();
 			order.pop();
@@ -31,3 +31,4 @@ class Solution{
 		return true;
 	}
 }
+
