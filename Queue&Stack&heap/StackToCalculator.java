@@ -97,3 +97,4 @@ class SolutionFive{
 		number_stack.push(res);
 	}
 }
+
