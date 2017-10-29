@@ -7,6 +7,8 @@ public class MediumNumber {
 
 }
 
+
+
 class SolutionSeven{
 	private PriorityQueue<Integer> maxHeap;
 	private PriorityQueue<Integer> minHeap;
