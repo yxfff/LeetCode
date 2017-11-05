@@ -54,5 +54,5 @@ DOWN：
 当nums[i-1]>=nums[i]时，进入DOWN状态
 当nums[i-1]<=nums[i]时，进入UP状态
 
-
+代码为：MaxWiggle.java
 
