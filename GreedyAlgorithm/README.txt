@@ -82,3 +82,32 @@ eg：
 
 代码：DeleteKDigits.java
 
+------------------------------------------------------------------------
+4.跳跃游戏
+LeetCode55 Jump Game
+https://leetcode.com/problems/jump-game/description/
+
+一个数组存储了非负整型数据，数组的第i个元素nums[i]，代表了可以从数组第i个位置最多向前
+跳跃nums[i]步，已知数组各元素的情况下，求是否可以从数组的第0个位置跳跃到数组的最后一个
+元素的位置？
+例如：
+nums=[2,3,1,1,4]。可以从nums[0]=2跳跃到nums[4]=4
+nums=[3,2,1,0,4],不可以从nums[0]=3跳跃到nums[4]=4
+
+思路：
+  如果从第0位置最远可以跳至第i个位置，则从第0位置也一定可以跳至
+  第1个位置，第2个位置...第i-1个位置
+  
+  所以从第0个位置应该跳至第1,2...i-1，i位置中，又可向前跳至更远位置
+  即index[1],index[2],...,index[i-1],index[i]最大的那个位置
+
+  定义一个数组index[]用来存储从第i个位置最远可以跳到的位置
+  index[i]=nums[i]+i;
+  eg:
+    位置：               [0,1,2,3,4]
+    最远跳跃nums：       [2,3,1,1,4]
+    最远达到的位置index: [2,4,3,4,8]
+
+  用变量jump扫描index数组，直到jump达到index数组尾部或者jump超过max_index，扫描过程中更新max_index
+  当最后jump与index.size（）相等时，返回true
+代码：JumpGame.java
