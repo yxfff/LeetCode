@@ -111,3 +111,30 @@ nums=[3,2,1,0,4],不可以从nums[0]=3跳跃到nums[4]=4
   用变量jump扫描index数组，直到jump达到index数组尾部或者jump超过max_index，扫描过程中更新max_index
   当最后jump与index.size（）相等时，返回true
 代码：JumpGame.java
+
+--------------------------------------------------------------------------
+5.跳跃游戏2
+LeetCode 45 Jump Game II
+https://leetcode.com/problems/jump-game-ii/description/
+一个数组存储了非负整型数据，数组中的第i个元素nums[i],代表了可以从数组的第i个
+位置最多向前跳跃nums[i]步，已知数组各元素的情况下，确认可以从第0位置跳跃到数组
+最后一个位置，求最少需要跳跃几次？
+
+示例：
+nums =[2,3,1,1,4]
+从0位置跳到第1个位置，从第一个位置跳至最后一个位置。
+
+思路：
+  在无法到达更远的地方时，在这之前应该跳至一个可以到达更远位置的位置
+
+  1.设置current_max_index为当前可达到的最远位置
+  eg：[2,3,1,1,4],遍历到第0个位置时，current_max_index为第2个位置1
+  2.设置pre_max_max_index为在遍历各个位置过程中，各个位置可到达的最远位置
+  eg: [2,3,1,1,4],遍历到第0个位置时，可以跳到第1,2个位置，跳至第一个位置时，
+      可以跳到更远位置为第4个位置即最后一个位置
+  3.设置jump_min为最少跳跃的次数
+  4.利用i遍历nums数组，若i超过current_max_index,jump_min加1
+  5.遍历过程中，若nums[i]+i更大，则更新pre_max_max_index=nums[i]+i
+
+代码为：JumpGameTwo.java
+
