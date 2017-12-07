@@ -44,3 +44,15 @@ https://leetcode.com/problems/subsets/description/
 
 -------------------------------------------------------------------------------
 
+2.求子集Ⅱ
+LeetCode.90 Subsets Ⅱ
+https://leetcode.com/problems/subsets-ii/discuss/
+已知一组数（其中有重复元素），求这组数可以组成的所有子集，结果中无重复的子集
+例如：nums[]=[2,1,2,2]
+结果为：[[],[1],[1,2],[1,2,2],[1,2,2,2],[2],[2,2],[2,2,2]]
+其中[2,1,2]和[1,2,2]是重复的集合
+
+思路：
+  先对nums进行排序，遍历时如果遇到nums[i-1]==nums[i],则直接跳到下一个
+  while(pos<nums.length&&nums[pos-1]==nums[pos]){i++;}
+代码：SubsetsDup.java
