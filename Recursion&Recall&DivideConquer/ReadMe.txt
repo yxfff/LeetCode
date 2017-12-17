@@ -56,3 +56,18 @@ https://leetcode.com/problems/subsets-ii/discuss/
   先对nums进行排序，遍历时如果遇到nums[i-1]==nums[i],则直接跳到下一个
   while(pos<nums.length&&nums[pos-1]==nums[pos]){i++;}
 代码：SubsetsDup.java
+
+------------------------------------------------------------------------------
+
+3.组合数之和
+LeetCode 40. Combination Sum II
+https://leetcode.com/problems/combination-sum-ii/description/
+
+已知一组数（其中有重复元素），求这组数可以组成的所有子集中
+子集中的各个元素和为整数target的子集。结果中无重复子集。
+
+思路：
+同2求子集，在此基础上进行调整
+递归调用时，传入target，每次减去candidates[i]
+
+代码为CombinationSum.java
