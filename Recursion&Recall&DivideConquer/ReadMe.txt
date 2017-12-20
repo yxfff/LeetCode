@@ -71,3 +71,24 @@ https://leetcode.com/problems/combination-sum-ii/description/
 递归调用时，传入target，每次减去candidates[i]
 
 代码为CombinationSum.java
+
+-----------------------------------------------------------------------------
+4.生成括号
+LeetCode22. Generate Parentheses
+https://leetcode.com/problems/generate-parentheses/description/
+
+已知n组括号，生成n组括号所有合法组合可能
+例如：n=3
+结果为["((()))","(()())","(())()","()(())","()()()"]
+
+思路：
+采用递归方法，在所有组合中合法的为
+1）左括号与有括号数量不可超过n
+2）每放一个左括号，才能放一个右括号，即右括号不可以先于左括号放置
+
+递归限制条件：
+1）左括号与右括号数量最多放置n个
+2）若左括号数量<=有括号数量，不可进行有括号的递归
+
+代码为：GenerateParentheses.java
+
